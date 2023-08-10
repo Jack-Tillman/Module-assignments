@@ -51,12 +51,18 @@ const rocky = {
 We have 3 customers to find the final total for, 
 so we can create a variable (user) and assign it the value of the name of each customer 
 that we want to test
+*/
+
+/*
 
 ---------------------------------- FOR PEER-REVIEW ----------------------------------
-reassign user to have whichever customer you want to test (timmy, sarah, rocky)
+uncomment out whichever user you wish to test (and leave the other 2 commented out)
+
 */
 
 let user = timmy;
+// let user = sarah;
+// let user = rocky;
 
 /*
 For all customers, the product of the pricePerRefill * refills will be used
@@ -88,7 +94,7 @@ function getSubDiscountTotal(initialTotal) {
         console.log(`Your subscription discount is ${discount}.`);
         const discountedTotal = initialTotal - discount;
         return discountedTotal;
-    // if the user does not have a subscription
+    // if the user does not have a subscription, don't subtract a discount but still reassign initialTotal to be discountedTotal to be used in below function
     } else {
         const discountedTotal = initialTotal;
         return discountedTotal;
@@ -112,12 +118,12 @@ If no coupon, then the price is unaffected
 function getCouponDiscount(subDiscountTotal){
     // if user has coupon, subtract 10 from their subDiscountTotal
     if(user.coupon){
-        const finalAmount = subDiscountTotal - 10;
-        return finalAmount;
+        const finAmount = subDiscountTotal - 10;
+        return finAmount;
     } else {
     // if user does not have coupon, finalAmount is same as subDiscountTotal
-        const finalAmount = subDiscountTotal;
-        return finalAmount;
+        const finAmount = subDiscountTotal;
+        return finAmount;
     };
 };
 
