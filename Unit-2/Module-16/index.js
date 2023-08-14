@@ -131,3 +131,25 @@ const finalAmount = getCouponDiscount(subDiscountTotal);
 console.log(`Your grand total is $${finalAmount}.`);
 
 
+/*
+
+* Class notes for solution 
+
+Begin by breaking the problem down into 3 parts: 
+1) calculating total cost of each customer by multiplying price per refill * # of refills 
+2) apply subscription discount if applicable
+3) apply coupon discount if applicable 
+
+when creating functions, make the parameters as instructive as possible
+you can use ternary operators with a return keyword in functions, like 
+
+function withCoupon(costAfterSub, coupon) {
+    return coupon ? costAfterSubscription - 10 : costAfterSubscription;
+};
+
+
+
+
+
+
+*/
