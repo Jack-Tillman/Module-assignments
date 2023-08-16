@@ -34,6 +34,7 @@ Expect concatOdds([1, 1, 2, 3], [4, 5, -55, 5, 5, 6]) to be [-55, 1, 3, 5]
 Expect concatOdds([1, 2, 3], [4, 5, [6]]) to be an error 
 Expect concatOdds([1, 2, {3}], [4, 5, 6]) to be an error 
 Expect concatOdds([1, 2, c], [4, 5, 6]) to be an error 
+Expect concatOdds([1, 2, 3]) to be an error 
 
 --------------
 * Functional Tests
