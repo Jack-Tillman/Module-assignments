@@ -12,43 +12,71 @@ const users = [
 function main() {
     //select div with id 'root'
     const root = document.getElementById('root');
-    root.style.display = "flex";
-    root.style.flexDirection = "column";
-
     //create DOM element for h1
     const h1 = document.createElement('h1');
     //assign a value to h1 
     h1.innerHTML = "FREELANCERS";
-    //styling for h1 *Using an external CSS file is way cleaner looking, but I figured I'd try using just JS for this workshop 
-    h1.style.textAlign = "center";
-    h1.style.borderBottom = "4px solid black"
     //append h1 as child to root div
     root.appendChild(h1);
+    //header for Name, Age, and Occupation 
+    const h2 = document.createElement('h2');
+    h2.innerHTML = "NAME AGE OCCUPATION";
+    root.appendChild(h2);
 
     // ul element
     const ul = document.createElement('ul');
-    ul.style.textAlign = "center";
     root.appendChild(ul);
     
+    // loop through users and create li for each item
     for (let i = 0; i < users.length; i++) {
         const li = document.createElement('li');
         //assign innerHTML of li to have name, age, and occupation and capitalize just the first letter of the occupation
-        li.innerHTML = `${users[i].name} |
-        ${users[i].age} | 
+        li.innerHTML = `${users[i].name} 
+        ${users[i].age}  
         ${(users[i].occupation).charAt(0).toUpperCase() + users[i].occupation.slice(1)}`;
 
-        //Styles for li 
+        ul.appendChild(li);
+
+    //  STYLING SECTION *Using an external CSS file is way cleaner looking, but I figured I'd try using just JS for this workshop 
+
+    //  root styling
+        root.style.display = "flex";
+        root.style.flexDirection = "column";
+        root.style.backgroundColor = "#d2f8e5";
+        root.style.fontFamily = "Helvetica";
+    
+    //  h1 styling
+        h1.style.textAlign = "center";
+        h1.style.borderBottom = "4px solid black";
+    
+    //  h2 styling
+        h2.style.textAlign = "center";
+        h2.style.borderBottom = "2px solid black";
+        h2.style.margin = "1rem 14.5rem";
+        h2.style.wordSpacing = "28rem";
+    
+    //  ul styling
+        ul.style.textAlign = "center";
+        ul.style.display = "flex";
+        ul.style.flexDirection = "column";
+        ul.style.alignItems = "space-evenly";
+        ul.style.justifyItems = "space-evenly";
+        ul.style.flex = "0";
+    
+    //  li styling
         li.style.color = "black";
-        li.style.margin = "1.5rem";
-        li.style.padding = "1.5rem";
+        li.style.margin = "1rem 8em"
+        li.style.padding = "2rem 8rem 2rem 8rem";
         li.style.listStyle = "none";
         li.style.fontSize = "24px";
         li.style.border = "1px solid lightblue";
         li.style.boxShadow = "10px 10px lightblue";
-
-        ul.appendChild(li);
-    }
-}
+        li.style.wordSpacing = "30rem";
+        li.style.display = "flex"
+        li.style.justifyContent = "left"
+    };
+};
 
 //call the main function
 main();
+
