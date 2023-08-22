@@ -69,8 +69,8 @@ function main() {
         li.style.padding = "2rem 8rem 2rem 8rem";
         li.style.listStyle = "none";
         li.style.fontSize = "24px";
-        li.style.border = "1px solid lightblue";
-        li.style.boxShadow = "10px 10px lightblue";
+        li.style.border = "1px solid black";
+        li.style.boxShadow = "10px 10px black";
         li.style.wordSpacing = "30rem";
         li.style.display = "flex"
         li.style.justifyContent = "left"
