@@ -11,7 +11,7 @@ class Car {
         this.year = year;
     }
     getDescription() {
-        console.log(`This car is the ${this.model} model of the ${this.year} ${this.make}.`);
+        console.log(`aa This car is the ${this.model} model of the ${this.year} ${this.make}.`);
         return `This car is the ${this.model} model of the ${this.year} ${this.make}.`
     }
 }
